@@ -1,0 +1,27 @@
+<form method="post" action="/checkout">
+    <div class="container">
+        <div class="row flex-row align-items-center">
+            <div class="col-7">{{> order_details_customer }}</div>
+            <div class="col">
+                <div class="d-flex justify-content-center">
+                    <a class="btn btn-primary" href="/checkout/google">
+                        <i class="bi bi-google"></i>
+                        Use Google Account
+                    </a>                    
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            {{> order_details_address }}
+        </div>
+        <div class="row">
+            <div class="m-2">
+                <button type="submit" class="btn btn-primary">
+                    Place Order
+                </button>
+                <a href="/cart?returnUrl={{ escapeUrl (navigationUrl )}}" 
+                    class="btn btn-primary">Back</a>
+            </div>
+        </div>
+    </div>
+</form>

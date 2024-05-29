@@ -1,0 +1,12 @@
+<div class="h2 bg-danger text-white text-center p-2 my-2">
+    500 - Error
+</div>
+<div class="text-center">
+    <a class="btn btn-secondary" href="/">OK</a>
+</div>
+
+{{#if (isDevelopment) }} 
+    <div class="h4 bg-danger text-white p-1 mt-2">Error Details</div>
+    <div class="h5 p-1">Message: {{ error.message }}</div>
+    <div class="font-monospace p-1">{{error.stack}}</div>
+ {{/if }}

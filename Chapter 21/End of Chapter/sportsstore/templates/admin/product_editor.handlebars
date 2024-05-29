@@ -1,0 +1,27 @@
+{{> admin/area_buttons mode="products"}}
+
+{{#if create}}
+<form hx-post="/api/products/create">
+{{else}}
+<form hx-put="/api/products/{{product.id.value}}">
+{{/if}}
+    {{> admin/product_input label="ID" name="id" data=product.id }}
+    {{> admin/product_input label="Name" name="name" data=product.name }}
+    <div class="mb-2">
+        <label>Description</label>
+        <textarea name="description" 
+            class="form-control">{{ product.description.value }}</textarea>
+        {{> admin/validation_messages product.description }}            
+    </div>
+    {{> admin/product_select label="Category" name="categoryId" 
+            data=product.categoryId list=categories}}
+    {{> admin/product_select label="Supplier" name="supplierId" 
+            data=product.supplierId list=suppliers}}
+    {{> admin/product_input label="Price" name="price" data=product.price }}
+
+    <div>
+        <button type="submit" class="btn btn-secondary text-white">Save</button>
+        <button class="btn btn-outline-secondary" 
+            hx-get="/api/products/table" hx-target="#content">Cancel</button>
+    </div>
+</form>

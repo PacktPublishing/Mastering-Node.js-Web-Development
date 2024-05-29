@@ -1,0 +1,11 @@
+<form method="post" action="/checkout">
+
+    {{> order_details_customer }}
+    {{> order_details_address }}
+    
+    <div class="m-2">
+        <button type="submit" class="btn btn-primary">Place Order</button>
+        <a href="/cart?returnUrl={{ escapeUrl (navigationUrl )}}" 
+            class="btn btn-primary">Back</a>
+    </div>
+</form>

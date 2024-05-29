@@ -1,0 +1,22 @@
+{{> admin/area_buttons mode="products"}}
+
+<table class="table table-sm">
+    <thead>
+        <tr>
+            <th>ID</th><th>Name</th>
+            <th>Category</th><th>Supplier</th>
+            <th class="text-end">Price</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each products }}    
+            {{> admin/product_row }}
+        {{/each }} 
+    </tbody>
+</table>
+
+<button class="btn btn-secondary" hx-get="/api/products/create" 
+        hx-target="#content">
+    Create
+</button>

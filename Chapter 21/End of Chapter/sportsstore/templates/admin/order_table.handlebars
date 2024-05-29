@@ -1,0 +1,40 @@
+{{> admin/area_buttons mode="orders"}}
+
+<table class="table table-sm table-bordered">
+    <thead><tr><th colspan="7" class="text-center">Orders</th></tr></thead>
+    <tbody>
+        {{#unless orders}}
+          <tr><td colspan="7" class="text-center">No Orders</td></tr>
+        {{/unless}}
+        {{#each orders}}
+            <tr class="table-active">
+                <th>#</th><th>Customer</th><th>ZIP</th>
+                <th>Product</th><th>Quantity</th><th>Price</th><th></th>
+            </tr>
+            {{#each selections}}
+            <tr>
+                {{#if (first @index)}}
+                    <td>{{ ../id }}</td>
+                    <td>{{ ../customer.name }}</td>
+                    <td>{{ ../address.zip }}</td>
+                {{else }}
+                    <th colspan="3"></th>
+                {{/if}}
+                <td>{{product.name}}</td>
+                <td>{{ quantity }}</td>
+                <td>{{currency product.price}}</td>
+                {{#if (first @index)}}
+                    {{> admin/order_button id=../id shipped=../shipped}}
+                {{else}}
+                    <td></td>
+                {{/if}}
+                </tr>
+            {{/each }}
+            <tr>
+                <th colspan="5" class="text-end">Total:</th>
+                <td>{{currency (total selections)}}</td>
+                <td></td>
+            </tr>
+        {{/each}}
+    </tbody>
+</table>

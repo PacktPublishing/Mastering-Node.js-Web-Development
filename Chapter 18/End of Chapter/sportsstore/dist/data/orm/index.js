@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CatalogRepoImpl = void 0;
+const core_1 = require("./core");
+const queries_1 = require("./queries");
+const storage_1 = require("./storage");
+const order_queries_1 = require("./order_queries");
+const order_storage_1 = require("./order_storage");
+const CatalogRepo = (0, storage_1.AddStorage)((0, queries_1.AddQueries)(core_1.BaseRepo));
+const RepoWithOrders = (0, order_storage_1.AddOrderStorage)((0, order_queries_1.AddOrderQueries)(CatalogRepo));
+exports.CatalogRepoImpl = RepoWithOrders;

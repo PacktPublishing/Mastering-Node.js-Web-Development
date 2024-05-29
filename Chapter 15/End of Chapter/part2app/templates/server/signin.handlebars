@@ -1,0 +1,17 @@
+{{#if failed }}
+    <h4 class="bg-danger text-white p-2 text-center">
+        Authentication failed. Please try again.
+    </h4>
+{{/if}}
+<form method="post">
+    <div class="m-2">
+        <label class="form-label">Name</label>
+        <input name="username" class="form-control" value="{{ username }}"/>
+    </div>
+    <div class="m-2">
+        <label class="form-label">Password</label>
+        <input name="password" type="password" class="form-control" 
+            value="{{ password }}"/>
+    </div>    
+    <button type="submit" class="btn btn-primary mx-2">Sign In</button>
+</form>

@@ -1,0 +1,5 @@
+FROM haproxy:2.9.6
+
+COPY haproxy.cfg /usr/local/etc/haproxy
+COPY cert.pem /usr/local/etc/haproxy
+COPY key.pem /usr/local/etc/haproxy/cert.pem.key

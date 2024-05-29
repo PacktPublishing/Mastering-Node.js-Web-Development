@@ -1,0 +1,12 @@
+<div class="mb-2">
+    <label>{{ label }}</label>
+    <select name="{{name}}" class="form-select " >
+        <option value="" disabled selected>Choose Category</option>
+        {{#each list }}
+            <option {{ selected id ../data.value }}
+                value="{{id}}">{{ name }}
+            </option>
+        {{/each}}
+    </select>
+    {{> admin/validation_messages data }}
+</div>

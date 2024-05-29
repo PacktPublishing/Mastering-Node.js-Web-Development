@@ -1,0 +1,28 @@
+{
+    "http": {
+        "port": 5000
+    },
+    "templates": {
+        "location": "templates",
+        "config": {
+            "layoutsDir": "templates",
+            "defaultLayout": "main_layout.handlebars",
+            "partialsDir": "templates"
+        }
+    },
+    "errors": {
+        "400": "not_found",
+        "500": "error"
+    }, 
+    "catalog": {
+        "orm_repo": {
+            "settings": {
+                "dialect": "sqlite",
+                "storage": "catalog.db"
+            },
+            "logging": true,
+            "reset_db": true,
+            "seed_file": "products.json"            
+        }
+    }
+}

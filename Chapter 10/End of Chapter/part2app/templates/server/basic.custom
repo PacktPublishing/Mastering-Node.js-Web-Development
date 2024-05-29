@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+    <head>{{ @style("bootstrap.min.css") }}</head>
+    <body>
+        {{ @partial("message") }}
+        <h3 class="m-2">Message: {{ message }}</h3>
+        <h3 class="m-2">Lower: {{ message.toLowerCase() }}</h3>
+        <h3 class="m-2">Count: {{ 2 * 3 }}</h3>
+    </body>
+</html>

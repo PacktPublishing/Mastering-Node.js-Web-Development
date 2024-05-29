@@ -1,0 +1,36 @@
+{
+    "catalog": {
+        "orm_repo": {
+            "reset_db": false,            
+            "settings": {
+                "dialect": "postgres",
+                "host": "postgres",
+                "port": "5432",
+                "username": "postgres",
+                "password": "MySecret$"
+            }
+        }
+    },
+    "sessions": {
+        "reset_db": false,
+        "orm": {
+            "settings": {
+                "dialect": "postgres",
+                "host": "postgres",
+                "port": "5432",
+                "username": "postgres",
+                "password": "MySecret$"
+            }
+        }        
+    },
+    "auth": {
+        "openauth": {
+            "redirectionUrl": "https://localhost/signin-google"
+        }
+    },
+    "admin": {
+        "openauth": {
+            "redirectionUrl": "https://localhost/auth-signin-google"
+        }
+    }
+}

@@ -1,0 +1,61 @@
+{
+    "name": "sportsstore",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "watch": "tsc-watch --noClear --onsuccess \"node dist/server.js\"",
+        "server": "nodemon --exec npm run watch",
+        "client": "webpack serve",
+        "start": "npm-run-all --parallel server client"
+    },
+    "nodemonConfig": {
+        "ext": "js,handlebars,json",
+        "ignore": [
+            "dist/**",
+            "node_modules/**",
+            "templates/admin/**"
+        ]
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@tsconfig/node20": "^20.1.2",
+        "@types/cookie-parser": "^1.4.6",
+        "@types/express": "^4.17.20",
+        "@types/express-session": "^1.17.10",
+        "@types/node": "^20.6.1",
+        "@types/passport": "^1.0.16",
+        "@types/passport-google-oauth20": "^2.0.14",
+        "@types/validator": "^13.11.5",
+        "nodemon": "^3.0.3",
+        "npm-run-all": "^4.1.5",
+        "tsc-watch": "^6.0.4",
+        "typescript": "^5.2.2",
+        "webpack": "^5.89.0",
+        "webpack-cli": "^5.1.4",
+        "webpack-dev-server": "^4.15.1"
+    },
+    "dependencies": {
+        "bootstrap": "^5.3.2",
+        "bootstrap-icons": "^1.11.3",
+        "connect-session-sequelize": "^7.1.7",
+        "dotenv": "^16.4.4",
+        "express": "^4.18.2",
+        "express-async-errors": "^3.1.1",
+        "express-handlebars": "^7.1.2",
+        "express-session": "^1.17.3",
+        "handlebars": "^4.7.8",
+        "helmet": "^7.1.0",
+        "htmx.org": "^1.9.10",
+        "http-proxy": "^1.18.1",
+        "passport": "^0.7.0",
+        "passport-google-oauth20": "^2.0.0",
+        "pg": "^8.11.3",
+        "pg-hstore": "^2.3.4",
+        "sequelize": "^6.35.1",
+        "sqlite3": "^5.1.6",
+        "validator": "^13.11.0"
+    }
+}

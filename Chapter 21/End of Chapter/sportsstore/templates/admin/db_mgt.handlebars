@@ -1,0 +1,11 @@
+{{> admin/area_buttons mode="database"}}
+
+<div class="m-2">
+    <h5 class="text-danger text-center">{{admin_msg}}</h5>
+</div>
+
+<div class="m-2 text-center">
+    <button class="btn btn-danger m-2"
+        hx-post="/api/database/reset"
+        hx-target="#content">Reset & Seed Database</button>
+</div>

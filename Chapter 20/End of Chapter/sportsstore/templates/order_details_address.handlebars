@@ -1,0 +1,15 @@
+<div class="m-2">
+    <h3>Ship to:</h3>        
+    {{#each (toArray "Street" "City" "State" "Zip") }}
+        {{#with (getValue ../order.address this) }}
+            <div class="form-group">
+                <label>{{ ../this }}:</label>
+                <input name="address[{{lower ../this}}]" class="form-control"
+                    value="{{value}}">
+            </div>
+            {{#unless valid}}
+                {{> validation_messages messages }}
+            {{/unless}}
+        {{/with}}
+    {{/each}}
+</div>

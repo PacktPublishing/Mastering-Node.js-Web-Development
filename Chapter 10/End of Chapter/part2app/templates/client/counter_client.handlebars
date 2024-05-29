@@ -1,0 +1,14 @@
+<button class="btn btn-primary m-2" action="incrementCounter">
+    Increment
+</button>
+<div>
+    {{#if (isOdd counter) }}
+        <h4 class="bg-primary text-white m-2 p-2">
+            Client Odd Value: {{ counter }}
+        </h4>                
+    {{else}}
+        <h4 class="bg-secondary text-white m-2 p-2">
+            Client Even Value: {{ counter }}
+        </h4>       
+    {{/if}}
+</div>

@@ -1,0 +1,10 @@
+<a class="btn btn-primary m-2" 
+    href="/dynamic/counter?c={{ increment req.query.c }}">
+        Increment
+</a>
+
+{{#if (isOdd req.query.c) }}
+    {{> odd }}
+{{else}}
+    {{> even }}
+{{/if}}

@@ -1,0 +1,28 @@
+version: "3"
+
+volumes:
+  databases:
+
+services:
+
+  postgres:
+    image: "postgres:16.2"
+    volumes:
+      - databases:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=MySecret$
+    
+  sportsstore:
+    image: "sportsstore"
+    depends_on:
+      - postgres
+    # ports: 
+    #   - 5000:5000
+    deploy:
+      replicas: 5
+
+  proxy:
+    image: "ss-proxy"
+    ports: 
+      - 80:80
+      - 443:443

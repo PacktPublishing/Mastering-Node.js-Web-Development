@@ -1,0 +1,37 @@
+<div class="container fluid">
+    <div class="row">
+        <div class="col-7">
+            {{#if name}}
+                <div class="m-2">
+                    <h4>Hello {{ name }}. You will be {{ nextage }} 
+                        in {{ years }} years.</h4>
+                </div>
+            {{/if}}
+            <div>
+                <form id="age_form" action="/form" method="post">
+                    <div class="m-2">
+                        <label class="form-label">Name</label>
+                        <input name="name" class="form-control" 
+                            value="{{ name }}"/>
+                    </div>
+                    <div class="m-2">
+                        <label class="form-label">Current Age</label>
+                        <input name="age" class="form-control" 
+                            value="{{ age }}" />
+                    </div>                   
+                    <div class="m-2">
+                        <label class="form-label">Number of Years</label>
+                        <input name="years" class="form-control" 
+                            value="{{ years }}" />          
+                    </div>                           
+                    <div class="m-2">
+                        <button class="btn btn-primary">Submit</button>                                
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-5">
+            {{> history }}
+        </div>
+    </div>
+</div>

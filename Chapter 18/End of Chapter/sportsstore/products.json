@@ -1,0 +1,40 @@
+{
+    "suppliers": [
+        { "id": 1, "name": "Acme Industries"},
+        { "id": 2, "name": "Big Boat Co"},
+        { "id": 3, "name": "London Chess"}
+    ],
+    "categories": [
+        { "id": 1, "name": "Watersports"},
+        { "id": 2, "name": "Soccer"},
+        { "id": 3, "name": "Chess"}
+    ],
+    "products": [
+        {"id": 1, "name": "Kayak", "description": "A boat for one person", 
+         "price": 275.00, "categoryId": 1, "supplierId": 2 },
+        {"id": 2, "name": "Lifejacket", 
+            "description": "Protective and fashionable", 
+            "price": 48.95, "categoryId": 1, "supplierId": 2 },
+        { "id": 3, "name": "Soccer Ball", 
+            "description": "FIFA-approved size and weight",
+            "price": 19.50, "categoryId": 2, "supplierId": 1 },
+        { "id": 4, "name": "Corner Flags",
+            "description": "Give your playing field a professional touch",
+            "price": 34.95, "categoryId": 2, "supplierId": 1 },
+        { "id": 5, "name": "Stadium",
+            "description": "Flat-packed 35,000-seat stadium",
+            "price": 79500, "categoryId": 2, "supplierId": 1 },
+        { "id": 6, "name": "Thinking Cap", 
+            "description": "Improve brain efficiency by 75%", "price": 16,
+            "categoryId": 3, "supplierId": 3 },            
+        { "id": 7, "name": "Unsteady Chair", 
+            "description": "Secretly give your opponent a disadvantage",
+            "price": 29.95, "categoryId": 3, "supplierId": 3 },            
+        { "id": 8, "name": "Human Chess Board", 
+            "description": "A fun game for the family", "price": 75,
+            "categoryId": 3, "supplierId": 3 },
+        { "id": 9, "name": "Bling King", 
+            "description": "Gold-plated, diamond-studded King",
+            "price": 1200, "categoryId": 3, "supplierId": 3 }            
+    ]
+}

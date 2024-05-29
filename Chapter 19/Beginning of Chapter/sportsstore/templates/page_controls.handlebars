@@ -1,0 +1,31 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            {{#pageButtons }}
+                {{#if selected}}
+                    <button class="btn btn-sm btn-light active mr-1 p-2">
+                        {{index}}
+                    </button>
+                {{else}}
+                <a class="btn btn-sm btn-light mr-1 p-2" 
+                    href="{{navigationUrl page=index }}">{{index}}</a>
+                {{/if}}
+            {{/pageButtons}}
+        </div>
+        <div class="col-auto text-end">         
+            <form id="pageSizeForm" method="get">
+                <select class="form-select" name="pageSize">
+                    {{#pageSizeOptions }}
+                        <option value="{{size}}" {{selected}}>
+                            {{size}} per page
+                        </option>
+                    {{/pageSizeOptions }}
+                </select>
+            </form>       
+        </div>
+        <div class="col-auto">
+            <button class="btn btn-light mr-2" type="submit" 
+                form="pageSizeForm">Go</button>
+        </div>
+    </div>
+</div>

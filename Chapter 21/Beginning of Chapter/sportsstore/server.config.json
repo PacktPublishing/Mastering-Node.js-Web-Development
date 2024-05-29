@@ -1,0 +1,58 @@
+{
+    "http": {
+        "port": 5000,
+        "content_security": {
+            "contentSecurityPolicy": {
+                "directives": {
+                    "upgradeInsecureRequests": null
+                }
+            }            
+        }        
+    },
+    "templates": {
+        "location": "templates",
+        "config": {
+            "layoutsDir": "templates",
+            "defaultLayout": "main_layout.handlebars",
+            "partialsDir": "templates"
+        }
+    },
+    "errors": {
+        "400": "not_found",
+        "500": "error"
+    }, 
+    "catalog": {
+        "orm_repo": {
+            "settings": {
+                "dialect": "sqlite",
+                "storage": "catalog.db"
+            },
+            "logging": true,
+            "reset_db": true,
+            "seed_file": "products.json"            
+        }
+    },
+    "sessions": {
+        "maxAgeHrs": 2,
+        "reset_db": true,
+        "orm": {
+            "settings": {
+                "dialect": "sqlite",
+                "storage": "sessions.db"
+            }, 
+            "logging": true
+        }
+    },
+    "auth": {
+        "openauth": {
+            "redirectionUrl": "http://localhost:5000/signin-google"
+        }
+    },
+    "admin": {
+        "openauth": {
+            "redirectionUrl": "http://localhost:5000/auth-signin-google"
+        },
+        "users": ["alice@example.com", "your_account@google.com"]
+    }
+
+}

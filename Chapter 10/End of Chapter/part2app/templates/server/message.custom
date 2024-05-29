@@ -1,0 +1,3 @@
+<div class="bg-primary text-white m-2 p-2">
+    {{ message }}
+</div>

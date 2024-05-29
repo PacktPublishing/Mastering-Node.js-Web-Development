@@ -1,0 +1,23 @@
+<div class="m-2">
+    <h3>Your details:</h3>
+    <div class="form-group">
+        <label>Name:</label>
+        {{#with (get order.customer.name) }}
+            <input name="customer[name]" class="form-control"
+                value="{{ value }}">
+            {{#if invalid}}
+                {{> validation_messages messages }}
+            {{/if }}
+        {{/with }}
+    </div>
+        <div class="form-group">
+        <label>Email:</label>
+        {{#with (get order.customer.email)}}
+            <input name="customer[email]" class="form-control" 
+                value="{{ value }}">
+            {{#if invalid }}
+                {{> validation_messages messages }}
+            {{/if }}
+        {{/with}}
+    </div>
+</div>

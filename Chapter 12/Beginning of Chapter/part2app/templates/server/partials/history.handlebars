@@ -1,0 +1,13 @@
+<h4>Recent Queries</h4>
+<table class="table table-sm table-striped my-2">
+    <thead>
+        <tr>
+            <th>Name</th><th>Age</th><th>Years</th><th>Result</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#unless history }}
+            <tr><td colspan="4">No data available</td></tr>
+        {{/unless }}
+    </tbody>
+</table>

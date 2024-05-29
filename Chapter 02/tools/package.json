@@ -1,0 +1,22 @@
+{
+  "name": "tools",
+  "version": "1.0.0",
+  "description": "",
+  "main": "hello.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsc-watch message.ts --onSuccess \"node message.js\"",
+    "go": "tsc message.ts && node message.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20",
+    "tsc-watch": "^6.0.4",
+    "typescript": "^5.2.2"
+  }
+}

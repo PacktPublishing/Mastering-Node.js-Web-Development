@@ -1,0 +1,17 @@
+<table class="table table-sm table-striped">
+    <thead>
+        <tr>
+            <th>ID</th><th>Name</th><th>Description</th>
+            <th>Price</th><th>Category</th><th>Supplier</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each products }}
+            <tr>
+                <td>{{id}}</td><td>{{name}}</td>
+                <td>{{description}}</td><td>{{price}}</td>
+                <td>{{category.name}}</td><td>{{supplier.name}}</td>
+            </tr>
+        {{/each}}
+    </tbody>
+</table>

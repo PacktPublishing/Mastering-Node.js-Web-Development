@@ -1,0 +1,32 @@
+<h2>Your cart</h2>
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th class="text-end">Quantity</th><th>Item</th>
+            <th class="text-end">Price</th><th class="text-end">Subtotal</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#unless cart.lines}}
+            <tr><td colspan="5" class="text-center">Cart is empty</td></tr>
+        {{/unless}}
+        {{#each cart.lines}}
+            {{> cart_line returnUrl=../returnUrl }}        
+        {{/each }}
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="3" class="text-end">Total:</td>
+            <td class="text-end">{{ currency cart.total }}</td>
+        </tr>
+    </tfoot>
+</table>
+<div class="text-center">
+    <a class="btn btn-primary" href="{{ returnUrl }}">Continue Shopping</a>
+    {{#if cart.lines}}
+        <a class="btn btn-primary" href="/checkout{{returnUrl}}">Checkout</a>
+    {{else}}
+        <button class="btn btn-primary" disabled>Checkout</button>
+    {{/if}}
+</div>

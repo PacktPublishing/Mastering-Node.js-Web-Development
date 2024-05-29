@@ -1,0 +1,16 @@
+<div class="d-grid gap-2 py-2">
+    <a class="btn btn-outline-secondary"
+        href="{{navigationUrl category="" page=1 searchTerm="" }}">
+            Home
+    </a>
+    {{#categoryButtons  }}
+        {{#if selected }}
+            <a class="btn btn-secondary">{{ name }}</a>
+        {{else }}
+            <a class="btn btn-outline-secondary"
+                href="{{navigationUrl category=id page=1}}">
+                {{ name }}
+            </a>
+        {{/if }}
+    {{/categoryButtons }}
+</div>

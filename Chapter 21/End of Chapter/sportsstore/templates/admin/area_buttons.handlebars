@@ -1,0 +1,19 @@
+<swap_wrapper hx-swap-oob="innerHTML:#area_buttons">
+    <div class="d-grid gap-2" >
+        <button id="products_btn" class="btn {{ buttonClass "products" mode }}"
+            hx-get="/api/products/table" hx-target="#content"
+            hx-push-url="/admin/products">
+            Products
+        </button>
+        <button id="orders_btn" class="btn {{ buttonClass "orders" mode }}"
+            hx-get="/api/orders/table" hx-target="#content"
+            hx-push-url="/admin/orders">
+            Orders
+        </button>
+        <button id="db_btn" class="btn {{ buttonClass "database" mode }}"
+            hx-get="/api/database" hx-target="#content"
+            hx-push-url="/admin/database">
+            Database
+        </button>        
+    </div>
+</swap_wrapper>

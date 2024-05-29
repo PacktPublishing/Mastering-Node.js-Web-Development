@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="/bundle.js"></script>        
+        <link href="css/bootstrap.min.css" rel="stylesheet" />
+    </head>
+    <body>
+        {{#if authenticated }}
+            <div class="bg-primary text-white p-1 clearfix">
+                <form method="post" action="/signout">
+                    <span class="h5">User: {{ user.username }}</span>
+                    <button class="btn btn-secondary btn-sm float-end"
+                        type="submit">Sign Out</button>                
+                </form>
+            </div>
+        {{else }}
+            {{#unless signinpage }}
+                <div class="bg-primary text-white p-1 clearfix">
+                    <a href="/signin" 
+                        class="btn btn-secondary btn-sm float-end">Sign In</a>
+                </div>            
+            {{/unless }}
+        {{/if}}
+        {{{ body }}}
+    </body>
+</html>

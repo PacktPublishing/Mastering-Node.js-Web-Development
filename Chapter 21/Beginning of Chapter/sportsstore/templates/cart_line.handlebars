@@ -1,0 +1,15 @@
+<tr>
+    <td class="text-end">{{ quantity }} </td>    
+    <td class="text-left">{{ product.name }}</td>
+    <td class="text-end">{{ currency product.price }}</td>
+    <td class="text-end">{{ currency subtotal }}</td>
+    <td class="text-center">
+        <form method="post" action="/cart/remove">
+            <input type="hidden" name="id" value="{{ product.id }}">
+            <input type="hidden" name="returnUrl" value="{{ returnUrl }}">
+            <button type="submit" class="btn btn-sm btn-danger">
+                Remove
+            </button>
+        </form>
+    </td>
+</tr>
