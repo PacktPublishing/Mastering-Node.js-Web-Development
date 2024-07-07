@@ -4,7 +4,13 @@ This file contains errors that are likely to prevent the code examples from work
 
 ---
 
-No serious errors have been reported. Please use the email address published in the book to contact the author if you have encountered a problem.
+**Chapter 2**
+
+On page 10, the instructions for installing Node.js initially specify version 20.9.0 but then switch to version 20.10.0. The examples have been tested with both versions, but you should use 20.10.0 for preference.
+
+(Thanks to Richard Bradley for reporting this problem)
+
+---
 
 
 
