@@ -11,6 +11,3 @@ On page 10, the instructions for installing Node.js initially specify version 20
 (Thanks to Richard Bradley for reporting this problem)
 
 ---
-
-
-
