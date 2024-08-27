@@ -19,3 +19,51 @@ contains the TypeScript compiler.
 (Thanks to Cesar Rodriguez Olvera for reporting this problem)
 
 ---
+
+**Chapter 5**
+
+On page 132, this sentence in the description of HTTP Strict Transport Security:
+
+>The HTTP Strict Transport Security (HSTS) header can 
+be used to tell browsers **not** to only use HTTPS requests for a domain
+
+should be:
+
+>The HTTP Strict Transport Security (HSTS) header can 
+be used to tell browsers to only use HTTPS requests for a domain
+
+---
+
+**Chapter 6**
+
+On page 146, this sentence:
+
+>In this chapter, I will continue to use the webapp project created in Chapter 4 and modified in 
+Chapter 3.
+
+should be:
+
+In this chapter, I will continue to use the webapp project created in Chapter 4 and modified in 
+Chapter **5**.
+
+---
+
+**Chapter 7**
+
+On page 182, this sentence:
+
+>In this chapter, I deliberately create an XSS vulnerability in the example application, demonstrate 
+how it can be exploited, and then use a content security browser to provide the browser with the 
+information it needs to stop the application from being abused.
+
+should be:
+
+>In this chapter, I deliberately create an XSS vulnerability in the example application, demonstrate 
+how it can be exploited, and then use a content security **policy** to provide the browser with the 
+information it needs to stop the application from being abused.
+
+---
+
+
+
+
