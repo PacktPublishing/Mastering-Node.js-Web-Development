@@ -64,6 +64,14 @@ information it needs to stop the application from being abused.
 
 ---
 
+**Chapter 8**
 
+On page 231, the addition of the async keyword in `Listing 8.14` isn't highlighted:
+
+test("readHandler tests", **async** (testCtx) => {
+
+(Thanks to Jonathan DePaul for reporting this problem)
+
+---
 
 
